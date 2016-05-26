@@ -1,0 +1,702 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="sv">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>manifesto / collection</title>
+
+<!-----------------------------scrollscript---------------------------------------------------->
+
+
+
+<script language="javascript">
+var isMSIE = (navigator.appName == "Microsoft Internet Explorer");
+			var timerID;
+			var px;
+			var py;
+
+
+			function jumpTo( posx, posy ) {
+				var scrollPosX = isMSIE ? document.body.scrollLeft : window.scrollX;
+				var scrollPosY = isMSIE ? document.body.scrollTop : window.scrollY;
+				var diffx = posx - scrollPosX;
+				var diffy = posy - scrollPosY;
+
+
+
+
+
+				if (Math.abs(diffx) == 0) {
+					px=0;
+					scrollPosX = posx;
+				}
+				if (diffx > 1) {
+					px=1;
+				} 
+				if (diffx < -1) {
+					px=-1;
+				}
+
+
+
+
+				if (Math.abs(diffy) == 0) {
+					py=0;
+					scrollPosY = posy;
+				}
+				if (diffy > 1) {
+					py=1;
+				} 
+				if (diffy < -1) {
+					py=-1;
+				}
+
+
+
+
+				if (Math.abs(diffx) == 0 && Math.abs(diffy) == 0) {
+					return;
+				} else {
+					clearTimeout(timerID);
+					scrollTo(scrollPosX +  px*Math.abs(diffx)*0.1 + px, scrollPosY + py*Math.abs(diffy)*0.1 + py);
+					timerID = setTimeout("jumpTo("+posx+","+posy+")", 10);
+				}
+			}
+
+function FP_changePropRestore() {//v1.0
+ var d=document,x; if(d.$cpe) { for(i=0; i<d.$cpe.length; i++) { x=d.$cpe[i];
+ if(x.v=="") x.v=""; eval("x."+x.n+"=x.v"); } d.$cpe=null; }
+}
+
+function FP_changeProp() {//v1.0
+ var args=arguments,d=document,i,j,id=args[0],o=FP_getObjectByID(id),s,ao,v,x;
+ d.$cpe=new Array(); if(o) for(i=2; i<args.length; i+=2) { v=args[i+1]; s="o"; 
+ ao=args[i].split("."); for(j=0; j<ao.length; j++) { s+="."+ao[j]; if(null==eval(s)) { 
+  s=null; break; } } x=new Object; x.o=o; x.n=new Array(); x.v=new Array();
+ x.n[x.n.length]=s; eval("x.v[x.v.length]="+s); d.$cpe[d.$cpe.length]=x;
+ if(s) eval(s+"=v"); }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_callJS(jsStr) { //v2.0
+  return eval(jsStr)
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+</script>
+
+<!-----------------------------/scrollscript---------------------------------------------------->
+
+<style type="text/css">
+<!--
+#storbok {
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:261px;
+	height:181px;
+	z-index:11;
+}
+#storkruka {
+	position:absolute;
+	left:375px;
+	top:0px;
+	width:222px;
+	height:194px;
+	z-index:12;
+}
+#s1500 {
+	position:absolute;
+	left:1500px;
+	top:0px;
+	width:750px;
+	height:495px;
+	z-index:2;
+}
+#s2250 {
+	position:absolute;
+	left:2250px;
+	top:0px;
+	width:750px;
+	height:495px;
+	z-index:6;
+}
+#s3000 {
+	position:absolute;
+	left:3000px;
+	top:0px;
+	width:750px;
+	height:495px;
+	z-index:7;
+}
+#s3750 {
+	position:absolute;
+	left:3750px;
+	top:0px;
+	width:750px;
+	height:495px;
+	z-index:8;
+}
+#apDiv4 {
+	position:absolute;
+	left:586px;
+	top:120px;
+	width:187px;
+	height:90px;
+	z-index:9;
+}
+#ex1 {
+	position:absolute;
+	left:750px;
+	top:20px;
+	width:74px;
+	height:53px;
+	z-index:13;
+}
+#kruka1 {
+	position:absolute;
+	left:750px;
+	top:119px;
+	width:52px;
+	height:41px;
+	z-index:15;
+}
+#bestall1 {
+	position:absolute;
+	left:750px;
+	top:218px;
+	width:40px;
+	height:37px;
+	z-index:16;
+}
+#bak1 {
+	position:absolute;
+	left:1500px;
+	top:449px;
+	width:53px;
+	height:14px;
+	z-index:17;
+}
+#produkt1 {
+	position:absolute;
+	left:1313px;
+	top:449px;
+	width:124px;
+	height:29px;
+	z-index:18;
+}
+#ex_grey1 {
+	position:absolute;
+	left:901px;
+	top:0px;
+	width:141px;
+	height:84px;
+	z-index:14;
+}
+#apDiv5 {
+	position:absolute;
+	left:1329px;
+	top:239px;
+	width:109px;
+	height:72px;
+	z-index:14;
+}
+#ex2 {
+	position:absolute;
+	left:2250px;
+	top:20px;
+	width:125px;
+	height:69px;
+	z-index:19;
+}
+#kruka2 {
+	position:absolute;
+	left:2250px;
+	top:119px;
+	width:108px;
+	height:88px;
+	z-index:20;
+}
+#bestall2 {
+	position:absolute;
+	left:2250px;
+	top:218px;
+	width:140px;
+	height:87px;
+	z-index:22;
+}
+#produkt2 {
+	position:absolute;
+	left:2813px;
+	top:449px;
+	width:93px;
+	height:17px;
+	z-index:23;
+}
+#bak2 {
+	position:absolute;
+	left:3000px;
+	top:449px;
+	width:63px;
+	height:21px;
+	z-index:24;
+}
+#ex3 {
+	position:absolute;
+	left:3750px;
+	top:20px;
+	width:101px;
+	height:79px;
+	z-index:25;
+}
+#kruka3 {
+	position:absolute;
+	left:3750px;
+	top:119px;
+	width:73px;
+	height:40px;
+	z-index:26;
+}
+#bestall3 {
+	position:absolute;
+	left:3750px;
+	top:218px;
+	width:133px;
+	height:65px;
+	z-index:27;
+}
+#exonwall {
+	position:absolute;
+	left:1242px;
+	top:21px;
+	width:184px;
+	height:192px;
+	z-index:29;
+}
+#apDiv6 {
+	position:absolute;
+	left:1308px;
+	top:32px;
+	width:123px;
+	height:96px;
+	z-index:23;
+}
+#exgourmet {
+	position:absolute;
+	left:920px;
+	top:189px;
+	width:142px;
+	height:103px;
+	z-index:30;
+}
+#apDiv8 {
+	position:absolute;
+	left:919px;
+	top:11px;
+	width:114px;
+	height:94px;
+	z-index:24;
+}
+#extext1 {
+	position:absolute;
+	left:920px;
+	top:99px;
+	width:310px;
+	height:64px;
+	z-index:31;
+}
+.manifestocss {
+	font-family: verdana;
+	font-size: 8pt;
+	font-style: normal;
+	line-height: 10pt;
+	text-transform: none;
+	color: #ADA8A8;
+}
+#exstilleben1 {
+	position:absolute;
+	left:1500px;
+	top:23px;
+	width:128px;
+	height:414px;
+	z-index:34;
+}
+#exstilleben2 {
+	position:absolute;
+	left:2021px;
+	top:30px;
+	width:110px;
+	height:184px;
+	z-index:35;
+}
+#storoliten {
+	position:absolute;
+	left:3041px;
+	top:84px;
+	width:299px;
+	height:174px;
+	z-index:36;
+}
+#krukahus {
+	position:absolute;
+	left:2452px;
+	top:100px;
+	width:97px;
+	height:119px;
+	z-index:37;
+}
+#krukagrey {
+	position:absolute;
+	left:2794px;
+	top:100px;
+	width:153px;
+	height:185px;
+	z-index:38;
+}
+#krukaovan {
+	position:absolute;
+	left:3466px;
+	top:40px;
+	width:147px;
+	height:162px;
+	z-index:39;
+}
+#animaion {
+	position:absolute;
+	left:4199px;
+	top:50px;
+	width:290px;
+	height:226px;
+	z-index:40;
+}
+#extext2 {
+	position:absolute;
+	left:920px;
+	top:357px;
+	width:310px;
+	height:91px;
+	z-index:32;
+}
+#extext3 {
+	position:absolute;
+	left:1710px;
+	top:99px;
+	width:300px;
+	height:173px;
+	z-index:33;
+}
+-->
+</style>
+<link href="../css/manifesto_rubrik.css" rel="stylesheet" type="text/css">
+<link href="../css/manifesto_brodtext.css" rel="stylesheet" type="text/css">
+<link href="../css/manifesto_underrubrik.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+<!--
+.stil5 {font-size: 8pt; font-style: normal; line-height: 10pt; text-transform: none; font-family: verdana;}
+#ex11 {
+	position:absolute;
+	left:750px;
+	top:20px;
+	width:137px;
+	height:89px;
+	z-index:14;
+	visibility: hidden;
+}
+#kruka22 {
+	position:absolute;
+	left:2250px;
+	top:119px;
+	width:83px;
+	height:76px;
+	z-index:21;
+	visibility: hidden;
+}
+#bestall33 {
+	position:absolute;
+	left:3750px;
+	top:218px;
+	width:129px;
+	height:82px;
+	z-index:28;
+	visibility: hidden;
+}
+#krukrubrik {
+	position:absolute;
+	left:2468px;
+	top:13px;
+	width:291px;
+	height:56px;
+	z-index:41;
+}
+#kruktext1 {
+	position:absolute;
+	left:2452px;
+	top:394px;
+	width:293px;
+	height:82px;
+	z-index:42;
+}
+#kruktext4 {
+	position:absolute;
+	left:3285px;
+	top:330px;
+	width:146px;
+	height:86px;
+	z-index:43;
+}
+#bestalltext1 {
+	position:absolute;
+	left:3944px;
+	top:90px;
+	width:208px;
+	height:138px;
+	z-index:44;
+}
+#kruktext3 {
+	position:absolute;
+	left:3091px;
+	top:330px;
+	width:150px;
+	height:114px;
+	z-index:45;
+}
+#krukrubrik2 {
+	position:absolute;
+	left:3091px;
+	top:40px;
+	width:201px;
+	height:31px;
+	z-index:46;
+}
+#krukrubrik3 {
+	position:absolute;
+	left:3439px;
+	top:134px;
+	width:176px;
+	height:90px;
+	z-index:47;
+}
+#kruktext5 {
+	position:absolute;
+	left:3466px;
+	top:247px;
+	width:273px;
+	height:62px;
+	z-index:47;
+}
+#bestalltext2 {
+	position:absolute;
+	left:3943px;
+	top:293px;
+	width:164px;
+	height:97px;
+	z-index:48;
+}
+a:link {
+	color: AAA096;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: AAA096;
+}
+a:hover {
+	text-decoration: none;
+	color: E75129;
+}
+a:active {
+	text-decoration: none;
+	color: E75129;
+}
+#krukrubrik1 {
+	position:absolute;
+	left:2452px;
+	top:40px;
+	width:187px;
+	height:37px;
+	z-index:49;
+}
+#exrubrik1 {
+	position:absolute;
+	left:920px;
+	top:40px;
+	width:190px;
+	height:22px;
+	z-index:50;
+}
+#exrubrik2 {
+	position:absolute;
+	left:1710px;
+	top:40px;
+	width:73px;
+	height:33px;
+	z-index:51;
+}
+#kruktext2 {
+	position:absolute;
+	left:2794px;
+	top:310px;
+	width:168px;
+	height:70px;
+	z-index:52;
+}
+#extext4 {
+	position:absolute;
+	left:2069px;
+	top:302px;
+	width:155px;
+	height:108px;
+	z-index:53;
+}
+#bestallrub1 {
+	position:absolute;
+	left:3944px;
+	top:40px;
+	width:178px;
+	height:25px;
+	z-index:54;
+}
+#bestallrub2 {
+	position:absolute;
+	left:3944px;
+	top:258px;
+	width:196px;
+	height:12px;
+	z-index:55;
+}
+-->
+</style>
+</head>
+
+<body leftmargin="0" topmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0" onLoad="MM_preloadImages('../gfx/images/bokstall.jpg','../gfx/knappar/menyknappar/kruka_farg.jpg','../gfx/knappar/menyknappar/bestallning_farg.jpg','../gfx/knappar/nedre_navigeringsknappar/bakat_farg.jpg','../gfx/knappar/nedre_navigeringsknappar/produkt_farg.jpg','../gfx/knappar/menyknappar/exet_farg.jpg','../gfx/images/kruka.jpg')">
+<div style="position: absolute; width: 185px; height: 88px; z-index: 9; left: 503px; top: 327px; visibility:visible" id="storkruktext">
+  <p class="manifesto_brodtext"><span class="manifesto_rubrik">mc 420/620</span><br>
+        <span class="manifesto_underrubrik">Gummikruka</span><span class="manifesto_brodtext"> med e</span>n smakfull design som kommer f&ouml;rgylla entr&eacute;er b&aring;de inomhus och utomhus.<br>
+  &Auml;r enkel att flytta &auml;ven n&auml;r den &auml;r platerad.<br>
+  <span class="manifesto_underrubrik">Klicka p&aring; produkten</span> f&ouml;r att veta mer.</p>
+</div>
+<div style="position: absolute; width: 185px; height: 87px; z-index: 10; left: 78px; top: 327px; visibility:visible" id="storboktext">
+  <p class="manifesto_brodtext"><span class="manifesto_rubrik">ex <br>
+    </span><span class="manifesto_underrubrik">Tidsskriftsh&aring;llare</span> som g&ouml;r ditt kontor mycket snyggare<br>
+  passar p&aring; alla v&auml;ggar och visar snyggt upp tidningarna.<br>
+  <span class="manifesto_underrubrik">Klicka p&aring; produkten</span> f&ouml;r att veta mer.</p>
+</div>
+<div id="storbok"><a href="javascript:jumpTo(750,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('bokstall','','../gfx/images/bokstall.jpg',1)"><img src="../gfx/images/bokstall_grey.jpg" alt="ex -tidsskriftsh&aring;llare" name="bokstall" width="374" height="327" border="0"></a></div>
+<div id="storkruka"><a href="javascript:jumpTo(2250,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image18','','../gfx/images/kruka.jpg',1)"><img src="../gfx/images/kruka_grey.jpg" alt="mc 420/620 -gummikruka" name="Image18" width="374" height="327" border="0"></a></div>
+<div id="s1500"></div>
+<div id="s2250"></div>
+                <div id="s3000"></div>
+                <div id="s3750"></div>
+                <div id="ex1"><img src="../gfx/knappar/menyknappar/exet_farg.jpg" alt="ex -tidsskriftsh&aring;llare" width="149" height="99"></div>
+<div id="kruka1"><a href="javascript:jumpTo(2250,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('menukruka','','../gfx/knappar/menyknappar/kruka_farg.jpg',1)"><img src="../gfx/knappar/menyknappar/kruka_grey.jpg" alt="mc 420/620 -gummikruka" name="menukruka" width="149" height="99" border="0" onMouseOver="MM_showHideLayers('ex1','','hide','ex11','','show')" onMouseOut="MM_showHideLayers('ex1','','show','ex11','','hide')"></a></div>
+<div id="bestall1"><a href="javascript:jumpTo(3750,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('bestallning','','../gfx/knappar/menyknappar/bestallning_farg.jpg',1)"><img src="../gfx/knappar/menyknappar/bestallning_grey.jpg" alt="best&auml;llning -kontaktinformation" name="bestallning" width="149" height="99" border="0" onMouseOver="MM_showHideLayers('ex1','','hide','ex11','','show')" onMouseOut="MM_showHideLayers('ex1','','show','ex11','','hide')"></a></div>
+<div id="bak1"><a href="javascript:jumpTo(750,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('bak','','../gfx/knappar/nedre_navigeringsknappar/bakat_farg.jpg',1)"><img src="../gfx/knappar/nedre_navigeringsknappar/bakat_grey.jpg" alt="bakåt" name="bak" width="76" height="46" border="0"></a></div>
+<div id="produkt1"><a href="javascript:jumpTo(1500,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('produktspec','','../gfx/knappar/nedre_navigeringsknappar/produkt_farg.jpg',1)"><img src="../gfx/knappar/nedre_navigeringsknappar/produkt_grey.jpg" alt="produktspecifikation" name="produktspec" width="186" height="46" border="0"></a></div>
+<div id="ex2"><a href="javascript:jumpTo(750,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','../gfx/knappar/menyknappar/exet_farg.jpg',1)"><img src="../gfx/knappar/menyknappar/exet_grey.jpg" alt="ex -tidsskriftshållare" name="Image8" width="149" height="99" border="0" onMouseOver="MM_showHideLayers('kruka2','','hide','kruka22','','show')" onMouseOut="MM_showHideLayers('kruka2','','show','kruka22','','hide')"></a></div>
+<div id="kruka2"><img src="../gfx/knappar/menyknappar/kruka_farg.jpg" alt="mc 420/620 -gummikruka" width="149" height="99"></div>
+<div id="bestall2"><a href="javascript:jumpTo(3750,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','../gfx/knappar/menyknappar/bestallning_farg.jpg',1)"><img src="../gfx/knappar/menyknappar/bestallning_grey.jpg" alt="best&auml;llning -kontaktinformation" name="Image10" width="149" height="99" border="0" onMouseOver="MM_showHideLayers('kruka2','','hide','kruka22','','show')" onMouseOut="MM_showHideLayers('kruka2','','show','kruka22','','hide')"></a></div>
+<div id="produkt2"><a href="javascript:jumpTo(3000,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','../gfx/knappar/nedre_navigeringsknappar/produkt_farg.jpg',1)"><img src="../gfx/knappar/nedre_navigeringsknappar/produkt_grey.jpg" alt="produktspecifikation" name="Image11" width="186" height="46" border="0"></a></div>
+<div id="bak2"><a href="javascript:jumpTo(2250,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','../gfx/knappar/nedre_navigeringsknappar/bakat_farg.jpg',1)"><img src="../gfx/knappar/nedre_navigeringsknappar/bakat_grey.jpg" alt="bakåt" name="Image12" width="76" height="46" border="0"></a></div>
+<div id="ex3"><a href="javascript:jumpTo(750,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','../gfx/knappar/menyknappar/exet_farg.jpg',1)"><img src="../gfx/knappar/menyknappar/exet_grey.jpg" alt="ex -tidsskriftshållare" name="Image13" width="149" height="99" border="0" onMouseOver="MM_showHideLayers('bestall3','','hide','bestall33','','show')" onMouseOut="MM_showHideLayers('bestall3','','show','bestall33','','hide')"></a></div>
+<div id="kruka3"><a href="javascript:jumpTo(2250,0)" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','../gfx/knappar/menyknappar/kruka_farg.jpg',1)"><img src="../gfx/knappar/menyknappar/kruka_grey.jpg" alt="mc 420/620 -gummikruka" name="Image14" width="149" height="99" border="0" onMouseOver="MM_showHideLayers('bestall3','','hide','bestall33','','show')" onMouseOut="MM_showHideLayers('bestall3','','show','bestall33','','hide')"></a></div>
+<div id="bestall3"><img src="../gfx/knappar/menyknappar/bestallning_farg.jpg" alt="beställning -kontaktinformation" width="149" height="99"></div>
+<div id="exonwall"><img src="../gfx/images/exet/exet_vinkel.jpg" width="257" height="427"></div>
+<div id="exgourmet"><img src="../gfx/images/exet/exet_gourmet.jpg" width="212" height="168"></div>
+<div class="manifesto_brodtext" id="extext1"><span class="manifesto_underrubrik">Nu vet du var du ska placera tidningarna</span> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo  et ea rebum. </div>
+<div class="manifesto_brodtext" id="extext2"><span class="manifesto_underrubrik">Passar till alla tidningar</span> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo  et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+<div id="exstilleben1"><img src="../gfx/images/exet/exet_sidan.jpg" width="169" height="420"></div>
+<div id="exstilleben2"><img src="../gfx/images/exet/exet_baksida.jpg" width="201" height="262"></div>
+<div id="storoliten"><img src="../gfx/images/kruka/kruka_huvudbild.jpg" width="400" height="236"></div>
+<div id="krukahus"><img src="../gfx/images/kruka/kruka_utomhus.jpg" width="293" height="285"></div>
+<div id="krukagrey"><img src="../gfx/images/kruka/kruka_detalj.jpg" width="168" height="199"></div>
+<div id="krukaovan"><img src="../gfx/images/kruka/kruka_ovan.jpg" width="273" height="201"></div>
+<div id="animaion"><img src="../gfx/images/exet/exet_animering_vit.gif" width="300" height="225"></div>
+<div class="manifesto_brodtext" id="extext3"><span class="manifesto_underrubrik">En stabil konstruktion</span> sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <br>
+  At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br>
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <br>
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+<div id="ex11"><img src="../gfx/knappar/menyknappar/exet_grey.jpg" alt="ex -tidsskriftsh&aring;llare" width="149" height="99"></div>
+<div id="kruka22"><img src="../gfx/knappar/menyknappar/kruka_grey.jpg" alt="mc 420/520 -gummikruka" width="149" height="99"></div>
+<div id="bestall33"><img src="../gfx/knappar/menyknappar/bestallning_grey.jpg" alt="beställning -kontaktinformation" width="149" height="99"></div>
+<div id="kruktext1"><span class="manifesto_underrubrik">F&ouml;rgyll ditt f&ouml;retags entr&eacute;</span><span class="manifesto_brodtext"> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span></div>
+<div class="manifesto_brodtext" id="kruktext4"><span class="manifesto_underrubrik">MC 420</span><br>
+  Diameter: 420 mm<br>
+  H&ouml;jd: 470 mm<br>
+  Sockelns h&ouml;jd: 100 mm<br>
+  &Ouml;ppningens bredd: 235 mm<br>
+  Vikt: 15 kg<br>
+  Volym: ca 54 liter<br>
+Vikt med jord: ca 135 kg</div>
+<div class="manifesto_brodtext" id="bestalltext1"> <span class="manifesto_underrubrik">L&auml;gg en inresseanm&auml;lan p&aring; din produkt</span> lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</div>
+<div class="manifesto_brodtext" id="kruktext3"><span class="manifesto_underrubrik">MC 620</span><br>
+  Diameter: 620 mm<br>
+  H&ouml;jd: 700 mm<br>
+  Sockelns h&ouml;jd: 100 mm<br>
+  &Ouml;ppningens bredd: 375 mm<br>
+  Vikt: 35 kg<br>
+  Volym: ca 170 liter<br>
+Vikt med jord: ca 425 kg</div>
+<div id="krukrubrik2"><img src="../gfx/images/rubriker/kruk_rubrik2.jpg" alt="mc 620     mc 420" width="320" height="33"></div>
+<div class="manifesto_brodtext" id="kruktext5"> <span class="manifesto_underrubrik">MC 420 och MC 620</span> &auml;r tv&aring; praktiska och t&aring;liga utomhuskrukor med stapelbar metallbotten och avtagbar gummidel. De st&aring;r stadigt och &auml;r l&auml;mpliga f&ouml;r offentlig milj&ouml;. Krukorna &auml;r svensktillverkade. Gummidelen &auml;r v&auml;vf&ouml;rst&auml;rkt och flexibel och tr&auml;s p&aring; metallsockeln och kan tas av igen vid f&ouml;rvaring. N&auml;r krukan st&auml;llts p&aring; plats f&auml;stes gummidelen p&aring; sockeln med hj&auml;lp av tv&aring; bultar. Botten har h&aring;l f&ouml;r dr&auml;nering och f&ouml;r att krukan vid behov ska kunna f&auml;stas i marken. &Ouml;ppningen i sockeln &auml;r anpassad f&ouml;r pallyftare och g&ouml;r att krukan kan flyttas &auml;ven efter plantering.<br>
+  <span class="manifesto_underrubrik">Design:</span> Petra Lundin, Manifesto.<br>
+  <span class="manifesto_underrubrik">Teknisk konsult:</span> Sven-Ingvar Olsson,<br>
+Helsingborgs Gummifabrik.</div>
+<div class="manifesto_brodtext" id="bestalltext2">  <span class="manifesto_underrubrik">Petra Lundin</span><br>
+  <span class="manifesto_brodtext">Designer  </span>
+  <DIV class="manifesto_brodtext">T. 0739-529 126</DIV>
+  <DIV class="manifesto_brodtext"><A href="mailto:petra@manifesto.se" target="_blank" rel="nofollow" ymailto="mailto:petra@manifesto.se">petra@manifesto.se</A><br>
+	<a target="_blank" href="http://www.manifesto.se/">www.manifesto.se</a><br>
+  </DIV>
+</div>
+<div id="krukrubrik1"><img src="../gfx/images/rubriker/kruka_rubrik1.jpg" alt="gummikruka" width="244" height="40"></div>
+<div id="exrubrik1"><img src="../gfx/images/rubriker/ex_rubrik1.jpg" alt="tidsskriftsh&aring;llare" width="321" height="33"></div>
+<div id="exrubrik2"><img src="../gfx/images/rubriker/ex_rubrik2.jpg" alt="ex" width="86" height="45"></div>
+<div class="manifesto_underrubrik" id="kruktext2">Stapelbar botten<span class="manifesto_brodtext"> eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</span></div>
+<div id="extext4"><span class="manifesto_underrubrik">F&auml;stes enkelt med skruvar</span><span class="manifesto_brodtext"> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</span></div>
+<div id="bestallrub1"><img src="../gfx/images/rubriker/bestallning_rubrik1.jpg" alt="best&auml;llning" width="208" height="40"></div>
+<div id="bestallrub2"><img src="../gfx/images/rubriker/bestallning_rubrik2.jpg" alt="kontaktinformation" width="208" height="18"></div>
+<p>&nbsp;</td>
+			</tr>
+		</table>
+<div style="position: absolute; width: 750px; height: 495px; z-index: 1; left: 750px; top: 0px" id="s750">
+<p class="manifesto_css"><font color="#D05702"><br>
+</font></p>
+</div>
+</div>
+</div>
+</body>
+
+</html>
